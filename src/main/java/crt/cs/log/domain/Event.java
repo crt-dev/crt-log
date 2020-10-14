@@ -1,4 +1,4 @@
-package domain;
+package crt.cs.log.domain;
 
 import lombok.Data;
 

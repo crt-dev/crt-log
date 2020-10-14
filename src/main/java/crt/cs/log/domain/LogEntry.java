@@ -1,4 +1,4 @@
-package domain;
+package crt.cs.log.domain;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
