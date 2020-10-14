@@ -20,15 +20,12 @@ gradle run --args='log1k.txt'
 
 gradle run --args='log100k.txt'
 
-
-
-
 Improvements
 -
 I would propose the following given more time:
 - When the unmatched items reach a certain size we could create a matching thread to match possible entries which keep the size of these structures within acceptable limit
 - some minor design change to allow more abstraction, possible use of IoC container, and unit test coverage
-- Improved exception management and edge case handling. When a critical error is received. Also fault tolerance: continue process if db operation fails? for eg.
+- Improved exception management and edge case handling. Also fault tolerance: continue process if db operation fails? for eg.
 - Add cmd line arguments to control threadpool size, dispatch size etc. further testing to finetune performance using said parameters
 - code to handle interaction to the database is ugly
-- More efficient method of artifically generating large logs for testing, mine was too slow
+- More efficient method of artificially generating large logs for testing 
