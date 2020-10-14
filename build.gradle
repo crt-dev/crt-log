@@ -1,0 +1,34 @@
+plugins {
+    id 'application'
+}
+apply plugin : "java"
+group 'crt-log'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    javaMainClass = "crt.cs.log.Application"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+    /* hsqldb */
+    compile 'org.hsqldb:hsqldb:2.5.1'
+
+    /* Lombok annotations */
+    compileOnly 'org.projectlombok:lombok:1.18.14'
+    annotationProcessor 'org.projectlombok:lombok:1.18.14'
+
+    /* jackson: json parsing/mapping */
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.11.1'
+}
