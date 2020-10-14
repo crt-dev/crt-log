@@ -7,6 +7,10 @@ import lombok.extern.slf4j.Slf4j;
 import java.sql.*;
 import java.util.List;
 
+/**
+ * DatabaseManager
+ * support interactions with hsql database
+ */
 @Slf4j
 @NoArgsConstructor
 public class DatabaseManager {
@@ -58,5 +62,15 @@ public class DatabaseManager {
         }
         preparedStatement.executeBatch();
         connection.commit();
+    }
+
+    public void close() {
+        try {
+            Thread.sleep(1000);
+            //I noticed that for small input sizes some items are not being written in /db, (hacky solution warning)
+            this.connection.close();
+        } catch (SQLException | InterruptedException ex) {
+            log.error("Cannot close connection due to: {}", ex);
+        }
     }
 }

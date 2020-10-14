@@ -73,6 +73,4 @@ public class LineProducer {
 
         return lines;
     }
-
-
 }

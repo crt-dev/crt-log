@@ -39,5 +39,6 @@ public class Application {
         lineProducer.read(scanner);
         databaseManager.countEvents();
         log.info("Log Analysis complete");
+        databaseManager.close();
     }
 }
