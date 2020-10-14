@@ -7,6 +7,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * ScannerFactory
+ * Creates a scanner for the give file
+ */
 @Slf4j
 public class ScannerFactory {
 

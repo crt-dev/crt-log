@@ -15,6 +15,7 @@ import java.util.Map;
 
 /**
  * LogAnalysisService
+ * Creates events for matched log entries, recording entries which cannot be matched
  */
 @Slf4j
 @RequiredArgsConstructor

@@ -4,9 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import crt.cs.log.domain.LogEntry;
 import lombok.extern.slf4j.Slf4j;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +14,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+/**
+ * LineProducer
+ *  - collects lines from the scanner
+ *  - dispatches set amount of lines to the consumer
+ *  - matches unmatched entries caused by splitting line input
+ */
 @Slf4j
 public class LineProducer {
 

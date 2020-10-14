@@ -10,6 +10,10 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * LineConsumer
+ * Consumer thread to receive invoke analysis service with list of lines and submit events to database.
+ */
 @Slf4j
 @AllArgsConstructor
 public class LineConsumer implements Runnable {
